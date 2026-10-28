@@ -1,69 +1,49 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import { APPS } from "./apps";
+import AppList from "./AppList";
+
+const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
 export default function Home() {
+  const pages = APPS.filter((a) => a.host === "pages").length;
+  const vercel = APPS.length - pages;
+  const perMonth = MONTHS.map((_, i) => {
+    const inMonth = APPS.filter((a) => Number(a.date.slice(5, 7)) === i + 1);
+    const p = inMonth.filter((a) => a.host === "pages").length;
+    return { p, v: inMonth.length - p, total: inMonth.length };
+  });
+  const max = Math.max(...perMonth.map((m) => m.total));
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>
-            To get started, edit the{" "}
-            <code className={styles.code}>page.tsx</code> file.
-          </h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="wrap">
+      <header>
+        <div className="eyebrow">Eeman1113 · Jan – Oct 2026</div>
+        <h1>
+          <span className="n">{APPS.length}</span> webapps shipped this year
+        </h1>
+        <p className="lede">
+          Every app I&apos;ve put live in 2026, on GitHub Pages and Vercel. Each link opens the live site.
+        </p>
+        <div className="stats">
+          <span><b>{pages}</b> on GitHub Pages</span>
+          <span><b>{vercel}</b> on Vercel</span>
+          <span>about <b>{Math.round(APPS.length / 10)}</b> a month</span>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="strip" aria-label="Apps shipped per month">
+          {perMonth.map((m, i) => (
+            <div key={i} className={`m${i > 9 ? " future" : ""}`} title={`${MONTHS[i]}: ${m.total} apps (${m.p} Pages, ${m.v} Vercel)`}>
+              <div className="bar" style={{ height: m.total ? (m.total / max) * 60 : 2 }}>
+                {m.p > 0 && <i className="p" style={{ flex: m.p }} />}
+                {m.v > 0 && <i className="v" style={{ flex: m.v }} />}
+              </div>
+              <div className="lbl">{MONTHS[i]}</div>
+            </div>
+          ))}
         </div>
-      </main>
+      </header>
+
+      <AppList apps={APPS} />
+
+      <footer>Dates are when each repo or project was created. Updated Oct 28, 2026.</footer>
     </div>
   );
 }
