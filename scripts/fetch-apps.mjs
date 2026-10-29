@@ -1,4 +1,4 @@
-// Builds app/apps.json from the GitHub and Vercel APIs — every live app, all years.
+// Builds app/apps.json from the GitHub and Vercel APIs: every live app, all years.
 // Env: GITHUB_TOKEN (optional, raises rate limit), VERCEL_TOKEN (optional; without it the
 // previous Vercel entries in apps.json are kept).
 import { readFile, writeFile } from "node:fs/promises";

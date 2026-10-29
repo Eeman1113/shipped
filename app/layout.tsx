@@ -9,7 +9,7 @@ const mono = IBM_Plex_Mono({ variable: "--font-mono", subsets: ["latin"], weight
 
 export const metadata: Metadata = {
   title: "Shipped",
-  description: `${THIS_YEAR.length} webapps put live in ${YEAR} — ${APPS.length} all time, on GitHub Pages and Vercel.`,
+  description: `${THIS_YEAR.length} webapps put live in ${YEAR}, ${APPS.length} all time, on GitHub Pages and Vercel.`,
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
