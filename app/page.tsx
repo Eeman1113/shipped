@@ -1,4 +1,4 @@
-import { APPS } from "./apps";
+import { APPS, UPDATED, YEAR } from "./apps";
 import AppList from "./AppList";
 
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -11,26 +11,29 @@ export default function Home() {
     const p = inMonth.filter((a) => a.host === "pages").length;
     return { p, v: inMonth.length - p, total: inMonth.length };
   });
-  const max = Math.max(...perMonth.map((m) => m.total));
+  const max = Math.max(1, ...perMonth.map((m) => m.total));
+  const months = [...new Set(APPS.map((a) => Number(a.date.slice(5, 7))))];
+  const last = Math.max(...months, 1);
+  const updated = new Date(UPDATED + "T00:00:00Z").toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" });
 
   return (
     <div className="wrap">
       <header>
-        <div className="eyebrow">Eeman1113 · Jan – Oct 2026</div>
+        <div className="eyebrow">Eeman1113 · Jan – {MONTHS[last - 1]} {YEAR}</div>
         <h1>
           <span className="n">{APPS.length}</span> webapps shipped this year
         </h1>
         <p className="lede">
-          Every app I&apos;ve put live in 2026, on GitHub Pages and Vercel. Each link opens the live site.
+          Every app I&apos;ve put live in {YEAR}, on GitHub Pages and Vercel. Each link opens the live site.
         </p>
         <div className="stats">
           <span><b>{pages}</b> on GitHub Pages</span>
           <span><b>{vercel}</b> on Vercel</span>
-          <span>about <b>{Math.round(APPS.length / 10)}</b> a month</span>
+          <span>about <b>{Math.round(APPS.length / last)}</b> a month</span>
         </div>
         <div className="strip" aria-label="Apps shipped per month">
           {perMonth.map((m, i) => (
-            <div key={i} className={`m${i > 9 ? " future" : ""}`} title={`${MONTHS[i]}: ${m.total} apps (${m.p} Pages, ${m.v} Vercel)`}>
+            <div key={i} className={`m${i + 1 > last ? " future" : ""}`} title={`${MONTHS[i]}: ${m.total} apps (${m.p} Pages, ${m.v} Vercel)`}>
               <div className="bar" style={{ height: m.total ? (m.total / max) * 60 : 2 }}>
                 {m.p > 0 && <i className="p" style={{ flex: m.p }} />}
                 {m.v > 0 && <i className="v" style={{ flex: m.v }} />}
@@ -43,7 +46,7 @@ export default function Home() {
 
       <AppList apps={APPS} />
 
-      <footer>Dates are when each repo or project was created. Updated Oct 28, 2026.</footer>
+      <footer>Dates are when each repo or project was created. Updates daily. Last updated {updated}.</footer>
     </div>
   );
 }
