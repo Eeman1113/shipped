@@ -8,16 +8,34 @@
   "updated": "2026-10-29",
   "apps": [
     {
+      "date": "2024-07-22",
+      "name": "ampusee",
+      "host": "vercel",
+      "url": "https://ampusee.vercel.app"
+    },
+    {
       "date": "2024-09-12",
       "name": "Kagaz",
       "host": "pages",
       "url": "https://eeman1113.github.io/Kagaz/"
     },
     {
+      "date": "2024-09-19",
+      "name": "notion-like-ai-editor",
+      "host": "vercel",
+      "url": "https://notion-like-ai-editor-eight.vercel.app"
+    },
+    {
       "date": "2024-09-25",
       "name": "eeja",
       "host": "pages",
       "url": "https://eeman1113.github.io/eeja/"
+    },
+    {
+      "date": "2025-01-08",
+      "name": "morphic-ai-answer-engine-generative-ui-lpm6",
+      "host": "vercel",
+      "url": "https://morphic-ai-answer-engine-generative-ui-lpm6.vercel.app"
     },
     {
       "date": "2025-03-26",
@@ -42,6 +60,12 @@
       "name": "CNWGOL",
       "host": "pages",
       "url": "https://eeman1113.github.io/CNWGOL/"
+    },
+    {
+      "date": "2025-04-09",
+      "name": "v0-dynamic-frame-layout",
+      "host": "vercel",
+      "url": "https://v0-dynamic-frame-layout-psi.vercel.app"
     },
     {
       "date": "2025-04-14",
@@ -105,6 +129,12 @@
     },
     {
       "date": "2025-05-27",
+      "name": "uc",
+      "host": "vercel",
+      "url": "https://uc-lyart.vercel.app"
+    },
+    {
+      "date": "2025-05-27",
       "name": "UC",
       "host": "pages",
       "url": "https://eeman1113.github.io/UC/"
@@ -144,6 +174,12 @@
       "name": "Interviewer",
       "host": "pages",
       "url": "https://eeman1113.github.io/Interviewer/"
+    },
+    {
+      "date": "2025-06-19",
+      "name": "rhythm",
+      "host": "vercel",
+      "url": "https://rhythm-git-main-eeman1113s-projects.vercel.app"
     },
     {
       "date": "2025-06-20",
@@ -236,10 +272,22 @@
       "url": "https://eeman1113.github.io/tetrisAI/"
     },
     {
+      "date": "2025-09-02",
+      "name": "likho-na",
+      "host": "vercel",
+      "url": "https://likho-na-one.vercel.app"
+    },
+    {
       "date": "2025-11-11",
       "name": "Last_Tea_Shop_Web",
       "host": "pages",
       "url": "https://eeman1113.github.io/Last_Tea_Shop_Web/"
+    },
+    {
+      "date": "2025-12-30",
+      "name": "around-us",
+      "host": "vercel",
+      "url": "https://around-us-one.vercel.app"
     },
     {
       "date": "2026-01-02",
