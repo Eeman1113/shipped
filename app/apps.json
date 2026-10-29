@@ -1,7 +1,246 @@
 {
   "year": "2026",
+  "years": [
+    "2024",
+    "2025",
+    "2026"
+  ],
   "updated": "2026-10-29",
   "apps": [
+    {
+      "date": "2024-09-12",
+      "name": "Kagaz",
+      "host": "pages",
+      "url": "https://eeman1113.github.io/Kagaz/"
+    },
+    {
+      "date": "2024-09-25",
+      "name": "eeja",
+      "host": "pages",
+      "url": "https://eeman1113.github.io/eeja/"
+    },
+    {
+      "date": "2025-03-26",
+      "name": "NGO_Manager",
+      "host": "pages",
+      "url": "https://eeman1113.github.io/NGO_Manager/"
+    },
+    {
+      "date": "2025-03-28",
+      "name": "Heartbeat",
+      "host": "pages",
+      "url": "https://eeman1113.github.io/Heartbeat/"
+    },
+    {
+      "date": "2025-04-08",
+      "name": "Wirerio",
+      "host": "pages",
+      "url": "https://eeman1113.github.io/Wirerio/"
+    },
+    {
+      "date": "2025-04-09",
+      "name": "CNWGOL",
+      "host": "pages",
+      "url": "https://eeman1113.github.io/CNWGOL/"
+    },
+    {
+      "date": "2025-04-14",
+      "name": "readball",
+      "host": "pages",
+      "url": "https://eeman1113.github.io/readball/"
+    },
+    {
+      "date": "2025-04-15",
+      "name": "infiwrite",
+      "host": "pages",
+      "url": "https://eeman1113.github.io/infiwrite/"
+    },
+    {
+      "date": "2025-04-21",
+      "name": "Pokemon_Adventures",
+      "host": "pages",
+      "url": "https://eeman1113.github.io/Pokemon_Adventures/"
+    },
+    {
+      "date": "2025-04-22",
+      "name": "yapnotes",
+      "host": "pages",
+      "url": "https://eeman1113.github.io/yapnotes/"
+    },
+    {
+      "date": "2025-04-23",
+      "name": "sootplane",
+      "host": "pages",
+      "url": "https://eeman1113.github.io/sootplane/"
+    },
+    {
+      "date": "2025-04-24",
+      "name": "type",
+      "host": "pages",
+      "url": "https://eeman1113.github.io/type/"
+    },
+    {
+      "date": "2025-04-25",
+      "name": "Invest",
+      "host": "pages",
+      "url": "https://eeman1113.github.io/Invest/"
+    },
+    {
+      "date": "2025-04-26",
+      "name": "Earth",
+      "host": "pages",
+      "url": "https://eeman1113.github.io/Earth/"
+    },
+    {
+      "date": "2025-05-09",
+      "name": "konflict",
+      "host": "pages",
+      "url": "https://eeman1113.github.io/konflict/"
+    },
+    {
+      "date": "2025-05-26",
+      "name": "The_Window",
+      "host": "pages",
+      "url": "https://eeman1113.github.io/The_Window/"
+    },
+    {
+      "date": "2025-05-27",
+      "name": "UC",
+      "host": "pages",
+      "url": "https://eeman1113.github.io/UC/"
+    },
+    {
+      "date": "2025-05-28",
+      "name": "maze",
+      "host": "pages",
+      "url": "https://eeman1113.github.io/maze/"
+    },
+    {
+      "date": "2025-05-29",
+      "name": "is_shree_alive",
+      "host": "pages",
+      "url": "https://eeman1113.github.io/is_shree_alive/"
+    },
+    {
+      "date": "2025-05-29",
+      "name": "yjs_lexi",
+      "host": "pages",
+      "url": "https://eeman1113.github.io/yjs_lexi/"
+    },
+    {
+      "date": "2025-06-06",
+      "name": "EWITW",
+      "host": "pages",
+      "url": "https://eeman1113.github.io/EWITW/"
+    },
+    {
+      "date": "2025-06-10",
+      "name": "500_NodeJs_Interview_Questions",
+      "host": "pages",
+      "url": "https://eeman1113.github.io/500_NodeJs_Interview_Questions/"
+    },
+    {
+      "date": "2025-06-17",
+      "name": "Interviewer",
+      "host": "pages",
+      "url": "https://eeman1113.github.io/Interviewer/"
+    },
+    {
+      "date": "2025-06-20",
+      "name": "ConvergenceEngine",
+      "host": "pages",
+      "url": "https://eeman1113.github.io/ConvergenceEngine/"
+    },
+    {
+      "date": "2025-06-23",
+      "name": "TATPILTM",
+      "host": "pages",
+      "url": "https://eeman1113.github.io/TATPILTM/"
+    },
+    {
+      "date": "2025-06-24",
+      "name": "Susu",
+      "host": "pages",
+      "url": "https://eeman1113.github.io/Susu/"
+    },
+    {
+      "date": "2025-06-26",
+      "name": "test",
+      "host": "pages",
+      "url": "https://eeman1113.github.io/test/"
+    },
+    {
+      "date": "2025-07-04",
+      "name": "lucida",
+      "host": "pages",
+      "url": "https://eeman1113.github.io/lucida/"
+    },
+    {
+      "date": "2025-07-08",
+      "name": "Prologue_Please",
+      "host": "pages",
+      "url": "https://eeman1113.github.io/Prologue_Please/"
+    },
+    {
+      "date": "2025-07-09",
+      "name": "Articles",
+      "host": "pages",
+      "url": "https://eeman1113.github.io/Articles/"
+    },
+    {
+      "date": "2025-07-10",
+      "name": "Lump",
+      "host": "pages",
+      "url": "https://eeman1113.github.io/Lump/"
+    },
+    {
+      "date": "2025-07-10",
+      "name": "Orbit",
+      "host": "pages",
+      "url": "https://eeman1113.github.io/Orbit/"
+    },
+    {
+      "date": "2025-07-15",
+      "name": "infinite",
+      "host": "pages",
+      "url": "https://eeman1113.github.io/infinite/"
+    },
+    {
+      "date": "2025-07-17",
+      "name": "MLFS",
+      "host": "pages",
+      "url": "https://mlfs.online/"
+    },
+    {
+      "date": "2025-08-04",
+      "name": "Idaten_Jump",
+      "host": "pages",
+      "url": "https://eeman1113.github.io/Idaten_Jump/"
+    },
+    {
+      "date": "2025-08-13",
+      "name": "calc",
+      "host": "pages",
+      "url": "https://eeman1113.github.io/calc/"
+    },
+    {
+      "date": "2025-08-16",
+      "name": "Planin",
+      "host": "pages",
+      "url": "https://eeman1113.github.io/Planin/"
+    },
+    {
+      "date": "2025-08-18",
+      "name": "tetrisAI",
+      "host": "pages",
+      "url": "https://eeman1113.github.io/tetrisAI/"
+    },
+    {
+      "date": "2025-11-11",
+      "name": "Last_Tea_Shop_Web",
+      "host": "pages",
+      "url": "https://eeman1113.github.io/Last_Tea_Shop_Web/"
+    },
     {
       "date": "2026-01-02",
       "name": "_rvsp_",
@@ -325,6 +564,12 @@
       "name": "podstart",
       "host": "pages",
       "url": "https://eeman1113.github.io/podstart/"
+    },
+    {
+      "date": "2026-10-29",
+      "name": "hollowmere",
+      "host": "pages",
+      "url": "https://eeman1113.github.io/hollowmere/"
     }
   ]
 }

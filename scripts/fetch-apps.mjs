@@ -1,12 +1,11 @@
-// Builds app/apps.json from the GitHub and Vercel APIs.
+// Builds app/apps.json from the GitHub and Vercel APIs — every live app, all years.
 // Env: GITHUB_TOKEN (optional, raises rate limit), VERCEL_TOKEN (optional; without it the
-// previous Vercel entries in apps.json are kept), YEAR (defaults to the current year).
+// previous Vercel entries in apps.json are kept).
 import { readFile, writeFile } from "node:fs/promises";
 
 const GH_USER = "Eeman1113";
 const VERCEL_TEAM = "team_Pi7z9gVoUB6nnUD8Huw2Jkrh";
-const SELF = "shipped-2026";
-const YEAR = process.env.YEAR || String(new Date().getUTCFullYear());
+const SELF = ["shipped", "shipped-2026"];
 const OUT = new URL("../app/apps.json", import.meta.url);
 
 const previous = await readFile(OUT, "utf8").then(JSON.parse).catch(() => ({ apps: [] }));
@@ -27,7 +26,7 @@ async function githubPages() {
     if (batch.length < 100) break;
   }
   const candidates = repos.filter(
-    (r) => r.has_pages && r.created_at.startsWith(YEAR) && r.name !== SELF && !r.name.toLowerCase().endsWith(".github.io"),
+    (r) => r.has_pages && !SELF.includes(r.name) && !r.name.toLowerCase().endsWith(".github.io"),
   );
   // Follow redirects so custom domains resolve, and drop sites that don't load.
   const checked = await Promise.all(
@@ -48,7 +47,7 @@ async function vercelProjects() {
   const token = process.env.VERCEL_TOKEN;
   if (!token) {
     console.warn("VERCEL_TOKEN not set; keeping previous Vercel entries");
-    return previous.apps.filter((a) => a.host === "vercel" && a.date.startsWith(YEAR));
+    return previous.apps.filter((a) => a.host === "vercel");
   }
   const headers = { Authorization: `Bearer ${token}` };
   const projects = [];
@@ -59,7 +58,6 @@ async function vercelProjects() {
     until = data.pagination?.next ?? "";
   } while (until);
   return projects
-    .filter((p) => new Date(p.createdAt).getUTCFullYear() === Number(YEAR))
     .map((p) => {
       const prod = p.targets?.production;
       const alias = prod?.alias?.[0];
@@ -72,5 +70,13 @@ async function vercelProjects() {
 const apps = [...(await githubPages()), ...(await vercelProjects())].sort(
   (a, b) => a.date.localeCompare(b.date) || a.name.localeCompare(b.name),
 );
-await writeFile(OUT, JSON.stringify({ year: YEAR, updated: new Date().toISOString().slice(0, 10), apps }, null, 2) + "\n");
-console.log(`${apps.length} apps (${apps.filter((a) => a.host === "pages").length} Pages, ${apps.filter((a) => a.host === "vercel").length} Vercel)`);
+const years = [...new Set(apps.map((a) => a.date.slice(0, 4)))].sort();
+await writeFile(
+  OUT,
+  JSON.stringify(
+    { year: String(new Date().getUTCFullYear()), years, updated: new Date().toISOString().slice(0, 10), apps },
+    null,
+    2,
+  ) + "\n",
+);
+console.log(`${apps.length} apps across ${years.length} years (${apps.filter((a) => a.host === "pages").length} Pages, ${apps.filter((a) => a.host === "vercel").length} Vercel)`);
