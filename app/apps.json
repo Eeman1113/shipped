@@ -5,7 +5,7 @@
     "2025",
     "2026"
   ],
-  "updated": "2026-11-16",
+  "updated": "2026-11-18",
   "apps": [
     {
       "date": "2024-07-22",
@@ -660,6 +660,18 @@
       "name": "pokemon-hns-autoworker",
       "host": "pages",
       "url": "https://eeman1113.github.io/pokemon-hns-autoworker/"
+    },
+    {
+      "date": "2026-11-17",
+      "name": "Unexplained",
+      "host": "pages",
+      "url": "https://eeman1113.github.io/Unexplained/"
+    },
+    {
+      "date": "2026-11-18",
+      "name": "Dhvani",
+      "host": "pages",
+      "url": "https://eeman1113.github.io/Dhvani/"
     }
   ]
 }
