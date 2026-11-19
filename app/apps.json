@@ -5,7 +5,7 @@
     "2025",
     "2026"
   ],
-  "updated": "2026-11-18",
+  "updated": "2026-11-19",
   "apps": [
     {
       "date": "2024-07-22",
@@ -672,6 +672,12 @@
       "name": "Dhvani",
       "host": "pages",
       "url": "https://eeman1113.github.io/Dhvani/"
+    },
+    {
+      "date": "2026-11-19",
+      "name": "how_to_make_life",
+      "host": "pages",
+      "url": "https://eeman1113.github.io/how_to_make_life/"
     }
   ]
 }
