@@ -5,7 +5,7 @@
     "2025",
     "2026"
   ],
-  "updated": "2026-11-25",
+  "updated": "2026-11-26",
   "apps": [
     {
       "date": "2024-07-22",
@@ -678,6 +678,12 @@
       "name": "how_to_make_life",
       "host": "pages",
       "url": "https://eeman1113.github.io/how_to_make_life/"
+    },
+    {
+      "date": "2026-11-25",
+      "name": "techdweeb-games",
+      "host": "pages",
+      "url": "https://eeman1113.github.io/techdweeb-games/"
     }
   ]
 }
