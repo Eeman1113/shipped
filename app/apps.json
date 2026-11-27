@@ -5,7 +5,7 @@
     "2025",
     "2026"
   ],
-  "updated": "2026-11-26",
+  "updated": "2026-11-27",
   "apps": [
     {
       "date": "2024-07-22",
@@ -684,6 +684,12 @@
       "name": "techdweeb-games",
       "host": "pages",
       "url": "https://eeman1113.github.io/techdweeb-games/"
+    },
+    {
+      "date": "2026-11-27",
+      "name": "roomwalk-cad-review",
+      "host": "pages",
+      "url": "https://eeman1113.github.io/roomwalk-cad-review/"
     }
   ]
 }
